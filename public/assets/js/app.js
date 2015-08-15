@@ -1,3 +1,1 @@
-/**
- * Created by utkarshshukla on 15/08/15.
- */
+$(document).on('click','.tag-cloud', function removeTag(){ $(this).remove(); });

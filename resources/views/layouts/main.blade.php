@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="{{ URL::asset('assets/css/font-awesome.min.css') }}">
     @show
 </head>
-<body style="padding-top:0px;">
+<body>
 
 @yield('maincontent')
 
