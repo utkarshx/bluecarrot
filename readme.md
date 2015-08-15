@@ -1,3 +1,9 @@
-## BlueCarrot Micro Blogging Framework
+# bluecarrot
+The Blue Carrot Micro-Blogging Platform for Visual Blogging.
 
-BlueCarrot is a Visual Micro-Blogging Framework to create a Micro-Blog.
+The Platform is focused for easy content creation and usage.
+
+#Tech Stack:
+- Laravel
+- MySql
+- Redis
