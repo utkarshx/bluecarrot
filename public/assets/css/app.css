@@ -1,6 +1,18 @@
+.rscFixed{
+    position: fixed;
+    bottom:0;
+    right:0;
+}
+
+.rightScroll{
+    background-color: #e9e9e9;
+    min-height:100%;
+}
+
 #tag-cloud {
-    width: 285px;
+    /*width: 285px;*/
     margin-left: 0;
+    padding-left: 0;
     /*font-size: 11.844px;*/
 }
 .tag-cloud {
@@ -17,7 +29,13 @@
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     vertical-align: baseline;
 }
-.tag-cloud:after {
+.fullheight {
+    display: block;
+    position: relative;
+    height: 100%;
+    padding-top: 50px;
+}
+.tag-cloud-close .tag-cloud:after {
     color: #000000;
     content: " ×";
     font-size: 20px;
@@ -45,4 +63,49 @@
 }
 .tag-cloud.tag-cloud-inverse {
     background-color: #333333;
+}
+
+/*Item Cards*/
+.item{
+    padding: 10px 10px;
+    min-height: 80px;
+    overflow: hidden;
+}
+
+.page_queue_grid .item .sub{
+    background-color: #fff;
+    bottom: 0;
+    box-sizing: border-box;
+    left: 0;
+    margin: 0;
+    padding: .65em 1em .6em 2.75em;
+    position: absolute;
+    width: 100%;
+}
+
+.page_queue_grid .item_content
+{
+    border-bottom: 1px solid #dcdce0;
+    height: 280px;
+}
+
+.page_queue_grid {
+    background-color:#f6f9fb;
+}
+
+.item_content{
+    background-color: #fff;
+    border: 1px solid #dcdce0;
+    color: #313131;
+    display: block;
+    height: auto;
+    max-width: 74em;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 80px;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    -webkit-transition: opacity .2s ease-out;
+    transition: opacity .2s ease-out;
 }

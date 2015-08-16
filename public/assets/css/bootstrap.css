@@ -27,12 +27,6 @@ html,body
     position: relative;
 }
 
-.fullheight {
-  display: block;
-  position: relative;
-  height: 100%;
-  background-color:#f6f9fb;
-}
 
 article,
 aside,
@@ -4553,7 +4547,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-right {
     float: right !important;
-    margin-right: -15px;
+    margin-right: 0;
   }
   .navbar-right ~ .navbar-right {
     margin-right: 0;
