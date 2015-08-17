@@ -247,3 +247,61 @@
     top: 50px;
     z-index: 10;
 }
+
+.tagSingle{
+
+}
+
+/* Video Related Item */
+.related-list-item .content-wrapper {
+    margin-left: 133px;
+}
+
+.related-list-item .thumb-wrapper {
+    position: absolute;
+    top: 0;
+    margin: 0 5px;
+    width: 120px;
+    height: 68px;
+    overflow: hidden;
+}
+.related-list-item {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.video-list-rght{
+    list-style: none;
+    padding-left: 0;
+}
+
+.video-list-item .title {
+    display: block;
+    line-height: 1.2;
+    max-height: 2.4em;
+    margin-bottom: 2px;
+    overflow: hidden;
+    cursor: hand;
+    color: #333;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.video-list-item a {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    color: #333;
+    min-height: 68px;
+    text-decoration: none;
+    padding: 0;
+}
+
+.video-list-item .stat {
+    display: block;
+    line-height: 1.4em;
+    height: 1.4em;
+    white-space: nowrap;
+    color: #767676;
+    font-size: 11px;
+}

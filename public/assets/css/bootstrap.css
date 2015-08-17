@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Maven+Pro:400,700);
+@import url(http://fonts.googleapis.com/css?family=Karla:400,700);
 /*!
  * bootswatch v3.3.5
  * Homepage: http://bootswatch.com
@@ -1094,7 +1094,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Maven Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Karla', sans-serif;
   font-size: 13px;
   line-height: 1.846;
   color: #666666;
@@ -6054,7 +6054,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Maven Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Karla', sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6172,7 +6172,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Maven Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Karla', sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;

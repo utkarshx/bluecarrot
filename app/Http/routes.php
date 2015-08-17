@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/images',function(){
     return view('pages.images');
 });
+
+Route::get('/videos',function(){
+    return view('pages.videos');
+});

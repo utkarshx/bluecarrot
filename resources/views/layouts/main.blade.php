@@ -11,7 +11,6 @@
     @section('stylesheets')
         <link href="{{ URL::asset('assets/css/bootstrap.css') }}" rel="stylesheet">
         <link href="{{ URL::asset('assets/css/app.css') }}" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{{ URL::asset('assets/css/font-awesome.min.css') }}">
     @show
 </head>
