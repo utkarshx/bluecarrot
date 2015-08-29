@@ -12,9 +12,9 @@ class HashMapTable extends Migration
      */
     public function up()
     {
-        Schema::create('hash_map', function (Blueprint $table) {
+        Schema::create('hashes', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('content_type');
+            $table->integer('content_type_id');
             $table->integer('content_id');
             $table->timestamps();
         });
@@ -27,6 +27,6 @@ class HashMapTable extends Migration
      */
     public function down()
     {
-        Schema::drop('hash_map');
+        Schema::drop('hashes');
     }
 }

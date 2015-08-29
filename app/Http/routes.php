@@ -11,13 +11,15 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/links', function () {
     return view('pages.home');
 });
 
 Route::get('/images',function(){
     return view('pages.images');
 });
+
+Route::get('/', 'LinkController@index');
 
 Route::get('/videos',function(){
     return view('pages.videos');

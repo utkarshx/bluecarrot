@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class TagsListTable extends Migration
+class LinkRepositories extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,14 @@ class TagsListTable extends Migration
      */
     public function up()
     {
-        Schema::create('tags', function (Blueprint $table) {
+        //
+        Schema::create('links', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('url',500);
+            $table->text('description');
+            $table->integer('hash_id');
+            $table->integer('creator_id');
+            $table->integer('link_type');
             $table->timestamps();
         });
     }
@@ -26,6 +31,7 @@ class TagsListTable extends Migration
      */
     public function down()
     {
-        Schema::drop('tags');
+        //
+        Schema::drop('links');
     }
 }

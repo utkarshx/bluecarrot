@@ -13,9 +13,9 @@ class TextArticles extends Migration
     public function up()
     {
         Schema::create('articles', function (Blueprint $table) {
-            $table->increments('article_id');
+            $table->increments('id');
             $table->integer('hash_id');
-            $table->longText('article_content');
+            $table->longText('content');
             $table->integer('creator_id');
             $table->timestamps();
         });
