@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     @show
-    <title>BlueCarrot @yield('title')</title>
+    <title>Kids SchoolBank Champs @yield('title')</title>
 
     @section('stylesheets')
         <link href="{{ URL::asset('assets/css/bootstrap.css') }}" rel="stylesheet">
