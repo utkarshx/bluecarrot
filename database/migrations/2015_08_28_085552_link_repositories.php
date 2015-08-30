@@ -18,6 +18,8 @@ class LinkRepositories extends Migration
             $table->string('url',500);
             $table->text('description');
             $table->integer('hash_id');
+            $table->string('image_name', 500)->nullable();
+            $table->string('image_text', 500)->nullable();
             $table->integer('creator_id');
             $table->integer('link_type');
             $table->timestamps();

@@ -2,7 +2,7 @@
 
 @section('maincontent')
     <div class="fullheight">
-        {{--@include('includes.navbar')--}}
+        @include('includes.navbar')
         <div class="col-md-12 page_queue_grid">
             {{--@include('includes.cards.onlytitle')
             @include('includes.cards.contenttitle')--}}

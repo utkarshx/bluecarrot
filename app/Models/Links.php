@@ -16,7 +16,8 @@ class Links extends Model
                 ->leftJoin('content_types', 'links.link_type', '=', 'content_types.id')
                 ->select('links.id as linkId', 'links.description as linkDescription', 'links.url as linkUrl',
                     'links.creator_id as creatorId', 'users.name as creatorName', 'links.hash_id as hashId',
-                    'content_types.name as linkType')
+                    'content_types.name as linkType', 'links.image_name as imageName', 'links.image_text as imageText')
+                ->orderBy('content_types.name')
                 ->paginate(100);
 
             $linkData = $links->toArray();
