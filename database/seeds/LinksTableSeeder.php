@@ -20,8 +20,10 @@ class LinksTableSeeder extends Seeder
 
         $videoCategoryId = DB::table('content_types')->where('name', 'Videos')->first()->id;
         $gameCategoryId = DB::table('content_types')->where('name', 'Games')->first()->id;
+        $pdfCategoryId = DB::table('content_types')->where('name', 'PDF')->first()->id;
 
-        $this->runOneIteration('description1', 'http://laravel.com/docs/5.1/queries', $linkCategoryId);
+        /*$this->runOneIteration('description1', 'http://laravel.com/docs/5.1/queries', $linkCategoryId);*/
+        $this->runOneIteration('Re-Create the Currency', 'https://rbi.org.in/FinancialEducation/Games.aspx?DivRs10', $linkCategoryId);
         $this->runOneIteration('Challenge on the road as you steer your way to financial stability', 'http://www.practicalmoneyskills.com/games/road_trip/road_trip.swf', $gameCategoryId);
         $this->runOneIteration('Ed Bank', 'http://www.practicalmoneyskills.com/games/ed_bank/ed_bank.swf', $gameCategoryId);
         $this->runOneIteration('Countdown to retirement', 'http://www.practicalmoneyskills.com/games/countdown/countdown.swf', $gameCategoryId);
@@ -30,7 +32,17 @@ class LinksTableSeeder extends Seeder
         $this->runOneIteration('Monopoly', 'http://www.hasbro.com/common/assets/Flash/Board/dad288661c4311ddbd0b0800200c9a66/d43910115056900b1016fded3497ee10/D46807D15056900B1046D26799484CA4.swf', $gameCategoryId);
         $this->runOneIteration('Celebrity calamity', 'http://financialentertainment.org/sites/all/files/flash/celebritycalamity/playStage.swf', $gameCategoryId);
         $this->runOneIteration('Bite Club', 'http://financialentertainment.org/sites/all/files/flash/biteclub/Shell.swf', $gameCategoryId);
-        $this->runOneIteration('description1', 'https://www.youtube.com/embed/DHI1jMfiEk4', $videoCategoryId);
+        /*$this->runOneIteration('description1', 'https://www.youtube.com/embed/DHI1jMfiEk4', $videoCategoryId);*/
+
+        $this->runOneIteration('Raju and the Money Tree', 'https://rbi.org.in/commonman/Upload/english/Content/PDFs/English_Comics_1.pdf', $pdfCategoryId);
+        $this->runOneIteration('Money Kumar and the Monetary Policy', 'https://rbi.org.in/commonman/Upload/english/Content/PDFs/MoneyKumarComic.pdf', $pdfCategoryId);
+        $this->runOneIteration('The Old Man Monetary', 'https://www.rbi.org.in/financialeducation/content/82252.pdf', $pdfCategoryId);
+        $this->runOneIteration('Raju and the Sky Ladder', 'https://www.rbi.org.in/financialeducation/content/83248.pdf', $pdfCategoryId);
+        $this->runOneIteration('Raju and the Magical Goat', 'https://www.rbi.org.in/financialeducation/content/89712.pdf', $pdfCategoryId);
+        $this->runOneIteration('Money Kumar and Caring for your Currency', 'https://www.rbi.org.in/financialeducation/content/MKCC.pdf', $pdfCategoryId);
+        $this->runOneIteration('Raju and the Friendly ATM', 'https://rbi.org.in/FinancialEducation/content/ATM_English%20Final.pdf', $pdfCategoryId);
+        $this->runOneIteration('Raju and the Debit Card', 'https://rbi.org.in/FinancialEducation/content/RDebit%20Card_E_F.pdf', $pdfCategoryId);
+
     }
 
     public function runOneIteration($description, $url, $linkTypeId, $tags=[]){

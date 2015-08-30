@@ -28,6 +28,9 @@ class ContentTypeTableSeeder extends Seeder
                 ],
                 [
                     'name'=>'Games'
+                ],
+                [
+                    'name'=>'PDF'
                 ]
             ]);
     }

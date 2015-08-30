@@ -71,6 +71,24 @@
 
         </div>
     </div>
+
+    <div id="modalPDF" class="modal fade" role="dialog" style="height: 100%;">
+        <div class="modal-dialog modal-lg" style="width: 90%; height: 92%;">
+
+            <!-- Modal content-->
+            <div class="modal-content" style="height: 100%;">
+
+                <div class="modal-body" style="height: 90%;">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">Open in New Tab</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 @endsection
 
 @section('scripts')
@@ -110,6 +128,20 @@
                 });
             });
 
+            $(document).on("click", ".itemPDF", function () {
+                var hrefer = $(this).attr('href');
+                $("#modalPDF .modal-body").html('<iframe class="embed-responsive-item" frameborder="0" allowfullscreen width="100%" height="100%" src="'+hrefer+'"></iframe>');
+                /*$("#modalPDF .modal-body param[name='movie']").val(hrefer);*/
+
+                $("#modalPDF .modal-body iframe").load(function() {
+                    console.log(this.contentWindow.document.body.offsetHeight);
+                    this.style.height = this.contentWindow.document.body.offsetHeight + 'px';
+                });
+            });
+
+            $('#modalPDF').on('hidden.bs.modal', function() {
+                $("#modalPDF .modal-body").html('');
+            });
             $('#modalGames').on('hidden.bs.modal', function() {
                 $("#modalGames .modal-body").html('');
             });
