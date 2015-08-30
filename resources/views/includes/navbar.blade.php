@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
             </button>
             {{--<a class="navbar-brand" href="#"><img src="{{ url('assets/img/logo.png') }}"></a>--}}
-            <a class="navbar-brand" href="{{ env('SCHOOLBANKCHAMPS') }}"><img src="{{ url('assets/img/back.png') }}"></a>
+            <a class="navbar-brand" href="{{ env('SCHOOLBANKCHAMPS') }}"><i class="fa fa-arrow-left"> Back</i>{{--<img src="{{ url('assets/img/back.png') }}">--}}</a>
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
