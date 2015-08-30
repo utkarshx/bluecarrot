@@ -21,6 +21,11 @@ Route::get('/images',function(){
 
 Route::get('/', 'LinkController@index');
 
+Route::get('/clearcache', function() {
+   \Cache::flush();
+    return "Cache Cleared";
+});
+
 Route::get('/videos',function(){
     return view('pages.videos');
 });
