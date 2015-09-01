@@ -21,6 +21,8 @@ Route::get('/images',function(){
 
 Route::get('/', 'LinkController@index');
 
+Route::get('/api/links', 'LinkController@getLinks');
+
 Route::get('/clearcache', function() {
    \Cache::flush();
     return "Cache Cleared";

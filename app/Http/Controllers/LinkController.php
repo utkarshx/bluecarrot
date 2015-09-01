@@ -36,6 +36,12 @@ class LinkController extends Controller
 
     }
 
+    public function getLinks(Request $request) {
+        $page = $request->input('page', 1);
+        $allLinks = $this->links->getAllLinks($page);
+        return response()->json(['posts'=>$allLinks]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
