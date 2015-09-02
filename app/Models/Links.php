@@ -24,7 +24,13 @@ class Links extends Model
 
             for ($x = 0; $x < sizeof($linkData['data']); $x++) {
                 $single = $linkData['data'][$x];
-                $linkData['data'][$x]->imageUrl = $imagesRoot.$linkData['data'][$x]->imageName;
+                if(!is_null($linkData['data'][$x]->imageName)) {
+                    $linkData['data'][$x]->imageUrl = $imagesRoot.$linkData['data'][$x]->imageName;
+                }
+                else {
+                    $linkData['data'][$x]->imageUrl = null;
+                }
+
                 $data = DB::table('tags_map')
                     ->leftJoin('tags', 'tags.id', '=', 'tags_map.tag_id')
                     ->where('tags_map.hash_id', $single->hashId)
