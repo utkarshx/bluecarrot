@@ -16,6 +16,7 @@ class LinkController extends Controller
     public function __construct(Links $links, Tags $tags){
         $this->links = $links;
         $this->tags = $tags;
+        $this->imagesRoot = 'assets/img/thumbnails/';
     }
     /**
      * Display a listing of the resource.
@@ -26,9 +27,10 @@ class LinkController extends Controller
     {
         //
         /*Cache::flush();*/
+
         $page = $request->input('page', 1);
 
-        $allLinks = $this->links->getAllLinks($page);
+        $allLinks = $this->links->getAllLinks($page, $this->imagesRoot);
         $allTags = $this->tags->getAllTagsForContentType('Links');
         /*dump($allLinks);*/
 
@@ -38,7 +40,7 @@ class LinkController extends Controller
 
     public function getLinks(Request $request) {
         $page = $request->input('page', 1);
-        $allLinks = $this->links->getAllLinks($page);
+        $allLinks = $this->links->getAllLinks($page, $this->imagesRoot);
         return response()->json(['posts'=>$allLinks]);
     }
 

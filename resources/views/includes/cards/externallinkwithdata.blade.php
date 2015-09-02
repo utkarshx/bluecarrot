@@ -6,7 +6,7 @@
             <a class="embedly-card" href="{{$data->linkUrl}}" data-card-controls="0" data-card-chrome="0">{{$data->linkDescription}}</a>
         @else
             <div>
-                <img style="margin: 0px auto;" src="{{url('assets/img/thumbnails/'.$data->imageName)}}" alt="{{$data->imageText}}" class="img-responsive">
+                <img style="margin: 0px auto;" src="{{url($data->imageUrl)}}" alt="{{$data->imageText}}" class="img-responsive">
             </div>
         @endif
 

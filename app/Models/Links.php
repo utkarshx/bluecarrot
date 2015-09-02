@@ -8,9 +8,9 @@ use Symfony\Component\HttpFoundation\Request;
 
 class Links extends Model
 {
-    public function getAllLinks($page) {
+    public function getAllLinks($page, $imagesRoot) {
         /*Cache::flush();*/
-        return Cache::rememberForever('content_all_links_page_'.$page, function () {
+        return Cache::rememberForever('content_all_links_page_'.$page, function () use ($imagesRoot) {
             $links =  DB::table('links')
                 ->leftJoin('users', 'users.id', '=', 'links.creator_id')
                 ->leftJoin('content_types', 'links.link_type', '=', 'content_types.id')
@@ -24,6 +24,7 @@ class Links extends Model
 
             for ($x = 0; $x < sizeof($linkData['data']); $x++) {
                 $single = $linkData['data'][$x];
+                $linkData['data'][$x]->imageUrl = $imagesRoot.$linkData['data'][$x]->imageName;
                 $data = DB::table('tags_map')
                     ->leftJoin('tags', 'tags.id', '=', 'tags_map.tag_id')
                     ->where('tags_map.hash_id', $single->hashId)
