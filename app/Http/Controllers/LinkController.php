@@ -40,7 +40,8 @@ class LinkController extends Controller
 
     public function getLinks(Request $request) {
         $page = $request->input('page', 1);
-        $allLinks = $this->links->getAllLinks($page, $this->imagesRoot);
+        $mobile = $request->input('mobile', 0);
+        $allLinks = $this->links->getAllLinks($page, $this->imagesRoot, $mobile);
         return response()->json(['posts'=>$allLinks]);
     }
 

@@ -8,12 +8,17 @@ use Symfony\Component\HttpFoundation\Request;
 
 class Links extends Model
 {
-    public function getAllLinks($page, $imagesRoot) {
+    public function getAllLinks($page, $imagesRoot, $mobile=0) {
         /*Cache::flush();*/
-        return Cache::rememberForever('content_all_links_page_'.$page, function () use ($imagesRoot) {
+        return Cache::rememberForever('content_all_links_page_'.$page.'_mobile_'.$mobile, function () use ($imagesRoot, $mobile) {
             $links =  DB::table('links')
                 ->leftJoin('users', 'users.id', '=', 'links.creator_id')
                 ->leftJoin('content_types', 'links.link_type', '=', 'content_types.id')
+                ->where(function($query) use ($mobile) {
+                    if($mobile == 1) {
+                        $query->where('content_flash', 0);
+                    }
+                })
                 ->select('links.id as linkId', 'links.description as linkDescription', 'links.url as linkUrl',
                     'links.creator_id as creatorId', 'users.name as creatorName', 'links.hash_id as hashId',
                     'content_types.name as linkType', 'links.image_name as imageName', 'links.image_text as imageText')
